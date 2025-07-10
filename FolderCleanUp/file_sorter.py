@@ -4,13 +4,6 @@ import shutil
 import config
 import pandas as pd
 
-"""
-os = Dateihandling
-shutil = Dateiverschiebung
-config= File match über Dictionary
-pandas = Loggingmodul
-"""
-
 # Logging-Datei
 log_file = "log.csv"
 
@@ -19,7 +12,7 @@ if not os.path.isfile(log_file):
     df = pd.DataFrame(columns=['Dateiname', 'Alter Pfad', 'Neuer Pfad', 'Status'])
     df.to_csv(log_file, index=False)
 
-
+# Logging-Funktion
 def logging (dateiname, alter_pfad, neuer_pfad, status):
     new_entry = pd.DataFrame([{
         'Dateiname': dateiname,
@@ -31,7 +24,7 @@ def logging (dateiname, alter_pfad, neuer_pfad, status):
     # Anhängen an die bestehende CSV (ohne Header)
     new_entry.to_csv(log_file, mode='a', header=False, index=False)
 
-
+# Ordner sortieren
 def sort_folder(selected_path):
     # Sprung in das Zielverzeichnis und Auflistung des Inhalts
     files = os.listdir(selected_path)
@@ -40,8 +33,10 @@ def sort_folder(selected_path):
     for file in files:
         file_path = os.path.join(selected_path, file)
 
+        # Wenn es sich um ein file handelt, wird die Dateiendung extrahiert
         if os.path.isfile(file_path):
             file_extension = os.path.splitext(file.lower())[1]
+            # Hier erfolgt der "match" mit dem Dictionary in der config.py
             zielordner = config.FOLDER_MAPPING.get(file_extension, config.DEFAULT_FOLDER)
             zielordner_pfad = os.path.join(selected_path, zielordner)
 
