@@ -6,6 +6,20 @@ Die Zuordnung erfolgt nach der Dateieindung.
 
 
 
+Benötigte Module:
+"os" für Dateipfad-Operationen
+"shutil" - Filehandling
+"pandas" zur Datenerfassung, -speicherung und -ausgabe
+"tkinter" - "Graphical User Interface"
+
+
+
+Benötigte Bibliotheken:
+"openpyxl" für "neuere" ExcelDateiformate (.xlsx)
+
+
+
+
 
 Erweiterungsideen:
 
