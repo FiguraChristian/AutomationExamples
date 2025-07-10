@@ -1,1 +1,1 @@
-Als erfahrener ITIL Prozess Manager, speziell im Problem Management, konzentriere ich mich aktuell darauf, Python zu nutzen, um IT-Prozesse zu optimieren und zu automatisieren. Mein Ziel ist es, operative Effizienz mit technischer Innovation zu verbinden.
+Als erfahrener ITIL Process Manager, speziell im Problem Management, konzentriere ich mich aktuell darauf, Python zu nutzen, um IT-Prozesse zu optimieren und zu automatisieren. Mein Ziel ist es, operative Effizienz mit technischer Innovation zu verbinden.
