@@ -1,0 +1,20 @@
+Dieses Programm soll automatisiert Verzeichnisse aufräumen
+
+Ziel:
+Dateien im beliebigen Ordner sollen über eine GUI automatisch in passende Unterverzeichnisse verschoben werden.
+Die Zuordnung erfolgt nach der Dateieindung.
+
+
+
+
+Erweiterungsideen:
+
+- Mit pyinstaller eine .exe Datei erzeugen, um das Tool einfacher zu verteilen zu können
+- Man könnte das Tool (z.B. mit dem Windows Task Scheduler) täglich laufen lassen oder auf
+  das Ablegen neuer Dateien dynamisch reagieren lassen ("watchdog" Bibliothek)
+- Threading, da GUI aktuell während der Sortierung blockiert ist
+  > würde z.B. eine Progress bar ermöglichen
+- TKinter ist Widgetfähig und somit anpassbar
+- Die Logdtei wird aktuell immer dort abgelegt, wo sich das Programm befindet
+  > Diese könnte man z.B. nur bei Bedarf (z.B. mit einem Button) ablegen lassen
+- Man könnte den User weitere Dateiendungen zur Bereinigung ermöglichen
