@@ -1,0 +1,33 @@
+"Automatisierter Projektbericht aus Excel-Listen"
+
+Szenario:
+Eine Abteilung im öffentlichen Dienst erhält wöchentlich mehrere Excel-Dateien (z.B. projekt_a_kw27.xlsx, projekt_b_kw27.xlsx),
+die den aktuellen Status verschiedener Projekte oder Fälle enthalten.
+Diese müssen manuell in eine große Übersichtstabelle kopiert werden, um einen Gesamtprojektbericht zu erstellen.
+
+
+Automatisierungsgedanke:
+
+Ein Skript, dass
+
+-   Alle Excel-Dateien in einem bestimmten Ordner findet, die einem bestimmten Namensmuster folgen (z.B. alle .xlsx-Dateien, die mit projekt_ beginnen)
+-   Jede dieser Excel-Dateien öffnet (nehmen Sie an, jede Datei hat nur ein Arbeitsblatt und die relevanten
+    Spalten sind immer dieselben, z.B. "Projekt-ID", "Status", "Bearbeiter", "Letztes Update")
+-   Die relevanten Daten aus jeder Datei ausliest
+-   Alle Daten in einer einzigen, konsolidierten Pandas DataFrame zusammenführt
+-   Die konsolidierten Daten in eine neue Excel-Datei (z.B. projektstatus_kw27.xlsx) speichert
+
+
+Benötigte Module:
+"pandas" zur Datenerfassung, -speicherung und -ausgabe
+"os" für Dateipfad-Operationen
+
+Benötigte Bibliotheken:
+"openpyxl" für "neuere" ExcelDateiformate (.xlsx)
+
+Erweiterungsideen:
+- Vollständige Dynamisierung aller Variablen, z.B. über eine GUI und EInlesefunktionen
+- Bestätigungs- bzw. Statussmeldungen
+- Das Skript könnte vollständig automatisiert per Win Task Scheduler laufen
+- Die Daten werden derzeit bei jeder Ausführung an die bestehenden angehängt, was zur Unübersichtlichkeit führt
+    > Man könnte z.B. für jeden Tag ein neues Blatt oder file anglegen
