@@ -27,7 +27,7 @@ Benötigte Bibliotheken:
 
 Erweiterungsideen:
 - Vollständige Dynamisierung aller Variablen, z.B. über eine GUI und EInlesefunktionen
-- Bestätigungs- bzw. Statussmeldungen
+- Bestätigungs- bzw. Statusmeldungen
 - Das Skript könnte vollständig automatisiert per Win Task Scheduler laufen
 - Die Daten werden derzeit bei jeder Ausführung an die bestehenden angehängt, was zur Unübersichtlichkeit führt
     > Man könnte z.B. für jeden Tag ein neues Blatt oder file anglegen
