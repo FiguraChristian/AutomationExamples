@@ -28,7 +28,7 @@ for file in files:
     if file.endswith(".xlsx"):
         # Nur Projektdateien suchen
         if file.startswith("projekt"):
-            # hier fehlt noch Code (Inhalt aus der gefilterten files auslesen)
+            # Dateipfad ermitteln
             filepath = os.path.join(projekt_ordner, file)
 
             try:
