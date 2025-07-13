@@ -22,6 +22,8 @@ def get_popular_movies(api_key, base_url):
 
     # Abfrageparameter aus der API-Doku
     params = {
+        # key ist globaler Authentifizierungsparameter
+        # und wird laut DOC für alle Anfragen benötigt
         "api_key": api_key,
         "language": "de-DE",
         "page": 1
