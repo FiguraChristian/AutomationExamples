@@ -13,7 +13,7 @@ from file_sorter import sort_folder
 root = tk.Tk()
 
 # Titel festlegen
-root.title("File Manager")
+root.title("Folder Cleanup")
 
 # Fenstergröße definieren
 root.geometry("400x400")
@@ -22,7 +22,7 @@ root.geometry("400x400")
 root.columnconfigure(0, weight=1)
 
 # Ein Label erzeugen und platzieren
-label = ttk.Label(root, text="Ordner aufräumen mit Tkinter")
+label = ttk.Label(root, text="Dieses Tool räumt Ihre Ordner auf")
 label.grid(padx=10, pady=100)
 
 # Platzhalter für späteren Pfad
