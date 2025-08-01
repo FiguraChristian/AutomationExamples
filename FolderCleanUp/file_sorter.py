@@ -13,6 +13,7 @@ if not os.path.isfile(log_file):
     df.to_csv(log_file, index=False)
 
 # Logging-Funktion
+# Neues DataFrame
 def logging (dateiname, alter_pfad, neuer_pfad, status):
     new_entry = pd.DataFrame([{
         'Dateiname': dateiname,
@@ -40,6 +41,7 @@ def sort_folder(selected_path):
             zielordner = config.FOLDER_MAPPING.get(file_extension, config.DEFAULT_FOLDER)
             zielordner_pfad = os.path.join(selected_path, zielordner)
 
+            # exists:ok = True um FileExistsFehler zu umgehen
             os.makedirs(zielordner_pfad, exist_ok=True)
 
             try:
