@@ -1,0 +1,13 @@
+Szenario:
+Eine Abteilung muss wiederkehrend Rechnungsbeträge aus PDF-Rechnungen extrahieren.
+Mit diesem Skript sollen die Angestellten befähigt werden, diesen Vorgang zu automatisieren.
+
+- Das Skript durchsucht den Zielordner nach PDF-Dateien und extrahiert den jeweiligen Gesamtbetrag.
+- Die Rechnungsbeträge werden  in einer .xlsx Datei kumuliert
+
+
+Benötigte Bibliotheken:
+os - Datei(-pfad) Handling
+pypdf - Einlesen von PDF Dateien
+re - RegEx (Mustersuche)
+openpyxl - Excelhandling
